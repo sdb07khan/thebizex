@@ -1,0 +1,40 @@
+:root {
+  --black-0: #060616;
+  --black-1: #1f1f22;
+
+  --white-0: #f9f8f9;
+  --white-1: #ffffff;
+  --white-2: #dddddd;
+
+  // bizex colors
+  --blue: #3490dc;
+  --indigo: #6574cd;
+  --purple: #9561e2;
+  --pink: #f66d9b;
+  --red: #e3342f;
+  --orange: #f6993f;
+  --yellow: #ffed4a;
+  --green: #38c172;
+  --teal: #4dc0b5;
+  --cyan: #6cb2eb;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #3490dc;
+  --secondary: #6c757d;
+  --success: #38c172;
+  --info: #6cb2eb;
+  --warning: #ffed4a;
+  --danger: #e3342f;
+  --light: #f8f9fa;
+  --dark: #343a40;
+
+  // font
+  --primary-font: "Poppins", sans-serif;
+}
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em; //1200px
+$bp-large: 50em; //800px
+$bp-medium: 37.5em; //600px
+$bp-small: 32.5em; //520px
