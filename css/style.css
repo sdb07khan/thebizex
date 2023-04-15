@@ -310,7 +310,8 @@ body {
         cursor: pointer;
         display: flex;
         justify-content: center;
-        align-items: center; }
+        align-items: center;
+        transition: all 0.1s ease-in; }
         .navbar .navbarContainer .search__button:hover {
           background-color: var(--red-deep); }
         .navbar .navbarContainer .search__button .icon {
