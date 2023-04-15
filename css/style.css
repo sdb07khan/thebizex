@@ -9,6 +9,7 @@
   --purple: #9561e2;
   --pink: #f66d9b;
   --red: #e3342f;
+  --red-deep: #d21312;
   --orange: #f6993f;
   --yellow: #ffed4a;
   --green: #38c172;
@@ -63,6 +64,22 @@ body {
       font-family: var(--primary-font);
       font-size: 1.4rem;
       font-weight: 300; }
+      .sectionCards .resultsContainer .dropdownContainer .dropdown .sortBtn {
+        padding: 0.8rem 1.5rem;
+        background: none;
+        border: 1px solid var(--white-2);
+        font-weight: 100;
+        border-radius: 4px;
+        cursor: pointer; }
+        .sectionCards .resultsContainer .dropdownContainer .dropdown .sortBtn .icon {
+          display: inline-block;
+          width: 1em;
+          height: 1em;
+          stroke-width: 0;
+          stroke: var(--black-1);
+          fill: var(--black-1);
+          transform: scale(2);
+          margin-left: 4px; }
   .sectionCards .cardsContainer {
     display: grid;
     grid-template-columns: repeat(4, minmax(22rem, 1fr));
@@ -78,9 +95,9 @@ body {
       overflow: hidden;
       font-family: var(--primary-font);
       background-color: var(--white-0);
-      box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.4);
       -webkit-box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.4);
-      -moz-box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.4); }
+      -moz-box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.4);
+      box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.4); }
       .sectionCards .cardsContainer .businessCard__imageContainer .imageLink .imageBox .image {
         height: 18rem;
         width: 26rem;
@@ -145,7 +162,10 @@ body {
       font-weight: 500;
       color: var(--white-0);
       border-radius: 4px;
-      cursor: pointer; }
+      cursor: pointer;
+      transition: all 0.1s ease-in; }
+      .sectionCards .loadButton .load:hover {
+        background-color: var(--red-deep); }
 
 .footer {
   background-color: var(--black-0); }
@@ -291,6 +311,8 @@ body {
         display: flex;
         justify-content: center;
         align-items: center; }
+        .navbar .navbarContainer .search__button:hover {
+          background-color: var(--red-deep); }
         .navbar .navbarContainer .search__button .icon {
           display: inline-block;
           width: 2rem;

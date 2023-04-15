@@ -58,6 +58,10 @@
         justify-content: center;
         align-items: center;
 
+        &:hover {
+          background-color: var(--red-deep);
+        }
+
         .icon {
           display: inline-block;
           width: 2rem;
