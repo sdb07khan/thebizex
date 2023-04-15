@@ -333,12 +333,11 @@ body {
         .navbar .navbarContainer .infoBox .infoList .contact .contactLink {
           text-decoration: none;
           color: var(--dark); }
-        .navbar .navbarContainer .infoBox .infoList .login {
+        .navbar .navbarContainer .infoBox .infoList .login .loginLink {
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          gap: 1.5rem;
           padding: 0.8rem 0.8rem;
           border: 1px solid var(--white-2);
           border-radius: 20px; }
-          .navbar .navbarContainer .infoBox .infoList .login .loginLink {
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 1.5rem; }
