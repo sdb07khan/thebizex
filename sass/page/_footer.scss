@@ -1,147 +1,186 @@
-.footer {
-  background-color: var(--black-0);
+.sectionFooter {
+  background-color: var(--dark);
 
   .footerContainer {
-    .collaborate {
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+    font-family: var(--primary-font);
+    padding: 8rem 5%;
+
+    .left {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 5% 10%;
+      gap: 5vw;
+    }
 
-      @media only screen and (max-width: $bp-largest) {
-        padding: 5% 2%;
-      }
+    .right {
+      display: flex;
+      gap: 5vw;
+    }
 
-      &__h6 {
-      }
+    .sectionListBox {
+      .sectionList {
+        list-style: none;
 
-      &__heading {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
+        .headerText {
+          padding-bottom: 6px;
 
-      .line {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-        text-align: center !important;
-      }
+          h3 {
+            text-transform: uppercase;
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: var(--white-0);
+            letter-spacing: 1px;
+          }
+        }
 
-      .word {
-        transform: translateY(10rem);
-        transition: all 0.3s ease-out;
-      }
+        .listItem {
+          padding: 6px 0;
 
-      &__description {
-        padding-top: 4rem;
-        padding-bottom: 6rem;
-      }
+          &__link {
+            text-decoration: none;
+            color: var(--light);
+            font-size: 1.2rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            transition: all 0.1s ease-in;
 
-      &__button--link {
-        padding: 2rem 3rem;
-        font-size: 1.4rem;
-
-        &:hover {
-          background-color: var(--white-0);
-          color: var(--black-0);
+            &:hover {
+              color: var(--red);
+            }
+          }
         }
       }
     }
 
-    .footerListContainer {
+    .sectionEmail {
+      .notifyForm {
+        position: relative;
+        border-radius: 4px;
+        overflow: hidden;
+
+        .inputBox {
+          .email {
+            font-family: var(--primary-font);
+            padding: 6px 8px;
+            border: none;
+            min-width: 20rem;
+            width: 25rem;
+          }
+
+          .email:focus {
+            outline: none;
+            color: var(--dark);
+          }
+        }
+
+        .notifyBtn {
+          font-family: var(--primary-font);
+          font-size: 1.2rem;
+          padding: 7px 8px;
+          color: var(--white-0);
+          background-color: var(--red);
+          border: none;
+          position: absolute;
+          right: 0;
+          top: 0;
+          cursor: pointer;
+
+          &:hover {
+            background-color: var(--red-deep);
+          }
+        }
+      }
+    }
+  }
+
+  .footerBrand {
+    padding: 0 10%;
+
+    .brandImage {
       width: 100%;
-      padding: 5% 0;
+      display: flex;
+      justify-content: center;
 
-      @media only screen and (max-width: $bp-medium) {
-        padding: 8% 0;
+      &__link {
+        text-decoration: none;
       }
+    }
 
-      @media only screen and (max-width: $bp-small) {
-        padding: 12% 0;
-      }
+    .socialLinkContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
 
-      .footerColumnBox {
+      .playstoreLinks {
         display: flex;
+        align-items: center;
         justify-content: center;
-        gap: 12rem;
-        padding: 0 14%;
+        position: absolute;
+        left: 0;
+        top: 2.5rem;
 
-        @media only screen and (max-width: $bp-largest) {
-          gap: 8rem;
-          padding: 0 12%;
+        .googleplayLink {
+          display: block;
+          height: 4rem;
+          width: 12.8rem;
+          background-color: var(--white-1);
+          border-radius: 7px;
+
+          .googleplayImg {
+            width: 100%;
+            height: 100%;
+          }
         }
 
-        @media only screen and (max-width: $bp-medium) {
-          flex-direction: column-reverse;
+        .appstoreLink {
+          display: block;
+          height: 7rem;
+          width: 17.3rem;
+
+          .appstoreImg {
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
+
+      .socialMediaBox {
+        display: flex;
+        gap: 1rem;
+        padding: 4rem 0;
+
+        .socialLink {
+          display: flex;
+          justify-content: center;
           align-items: center;
-        }
+          height: 3.5rem;
+          width: 3.5rem;
+          background-color: var(--gray);
+          border-radius: 50%;
+          transition: all 0.1s ease-in;
 
-        @media only screen and (max-width: $bp-small) {
-          gap: 6rem;
-        }
+          &:hover {
+            background-color: var(--red);
+          }
 
-        .footerLogoBox {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-
-          @media only screen and (max-width: $bp-medium) {
+          span {
+            display: flex;
+            justify-content: center;
             align-items: center;
-            gap: 2rem;
-          }
 
-          .footerLogo {
-            .footerLogoImg {
-              height: 5rem;
+            svg {
+              height: 1.6rem;
+              width: 1.6rem;
+              fill: var(--white-0);
             }
-          }
 
-          .copyrightBox {
-            .copyrightPara {
-              font-family: var(--primary-font);
-              font-size: 1.3rem;
-              color: var(--white-0);
-            }
-          }
-        }
-
-        .footerListBoxContainer {
-          display: flex;
-          gap: 12rem;
-
-          @media only screen and (max-width: $bp-small) {
-            gap: 6rem;
-            align-items: flex-start;
-          }
-
-          .footerListBox {
-            text-align: center;
-
-            .footerList {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              gap: 1.8rem;
-
-              a {
-                text-decoration: none;
-
-                li {
-                  font-family: var(--primary-font);
-                  font-size: 1.3rem;
-                  font-weight: 600;
-                  color: var(--white-0);
-                  text-transform: uppercase;
-                  list-style: none;
-                  letter-spacing: 0.1rem;
-                  transition: all 0.1s ease;
-
-                  &:hover {
-                    color: var(--neon-0);
-                  }
-                }
-              }
+            .insta {
+              height: 1.6rem;
+              width: 1.6rem;
+              fill: var(--white-0);
+              transform: scale(1.2);
             }
           }
         }

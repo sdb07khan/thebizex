@@ -49,18 +49,13 @@
 
   .cardsContainer {
     display: grid;
-    grid-template-columns: repeat(4, minmax(22rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
     row-gap: 4rem;
-    column-gap: 2.5rem;
+    column-gap: 3rem;
     place-content: center;
-
-    @media only screen and (max-width: $bp-largest) {
-      grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
-    }
 
     .businessCard {
       border-radius: 6px;
-      max-width: 26rem;
       overflow: hidden;
       font-family: var(--primary-font);
       background-color: var(--white-0);
@@ -73,7 +68,7 @@
           .imageBox {
             .image {
               height: 18rem;
-              width: 26rem;
+              width: 100%;
               object-fit: cover;
             }
           }
