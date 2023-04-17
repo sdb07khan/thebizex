@@ -4,16 +4,159 @@
   width: 100%;
   border-bottom: 1px solid var(--white-2);
   background-color: var(--white-1);
+  z-index: 100;
 
   .navbarContainer {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
 
-    .logoBox {
-      .logo {
-        height: 4rem;
-        width: 100%;
+    .navbarInitial {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .logoBox {
+        .logo {
+          height: 4rem;
+          width: 100%;
+        }
+      }
+
+      .search {
+        display: flex;
+        width: 25%;
+        position: relative;
+
+        @media only screen and (max-width: $bp-largest) {
+          width: 30%;
+        }
+
+        @media only screen and (max-width: $bp-large) {
+          display: none;
+        }
+
+        &__input {
+          font-family: var(--primary-font);
+          font-size: 1.4rem;
+          padding: 1.2rem 2rem;
+          color: var(--dark);
+          background-color: var(--white-1);
+          width: 100%;
+          border-radius: 40px;
+          border: 1px solid var(--white-2);
+        }
+
+        &__input:focus {
+          outline: none;
+          color: var(--dark);
+        }
+
+        ::placeholder {
+          color: var(--dark);
+          font-family: var(--primary-font);
+          opacity: 0.9;
+        }
+
+        &__button {
+          background-color: var(--red);
+          height: 3.5rem;
+          width: 3.5rem;
+          border-radius: 50%;
+          position: absolute;
+          top: 0.6rem;
+          right: 0.8rem;
+          border: none;
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: all 0.1s ease-in;
+
+          &:hover {
+            background-color: var(--red-deep);
+          }
+
+          .icon {
+            display: inline-block;
+            width: 2rem;
+            height: 2rem;
+            stroke-width: 0;
+            stroke: var(--white-1);
+            fill: var(--white-1);
+          }
+        }
+      }
+
+      .infoBox {
+        padding-right: 2rem;
+
+        @media only screen and (max-width: $bp-large) {
+          padding-right: 0;
+        }
+
+        .infoList {
+          list-style: none;
+          display: flex;
+          align-items: center;
+          gap: 4rem;
+          font-family: var(--primary-font);
+          font-size: 1.6rem;
+
+          @media only screen and (max-width: $bp-medium) {
+            gap: 2rem;
+          }
+
+          .contact {
+            @media only screen and (max-width: $bp-medium) {
+              background-color: var(--red);
+              height: 3rem;
+              width: 3rem;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-radius: 50%;
+            }
+            .contactLink {
+              text-decoration: none;
+              color: var(--dark);
+
+              @media only screen and (max-width: $bp-medium) {
+                display: none;
+              }
+            }
+
+            .contactLinkPhone {
+              text-decoration: none;
+              color: var(--dark);
+              display: none;
+
+              @media only screen and (max-width: $bp-medium) {
+                display: contents;
+              }
+            }
+          }
+
+          .login {
+            .loginLink {
+              text-decoration: none;
+              display: flex;
+              align-items: center;
+              gap: 1.5rem;
+              padding: 0.8rem 0.8rem;
+              border: 1px solid var(--white-2);
+              border-radius: 20px;
+            }
+          }
+        }
+      }
+    }
+
+    #searchTab {
+      display: none;
+
+      @media only screen and (max-width: $bp-large) {
+        display: contents;
       }
     }
 
@@ -21,6 +164,14 @@
       display: flex;
       width: 25%;
       position: relative;
+
+      @media only screen and (max-width: $bp-largest) {
+        width: 30%;
+      }
+
+      // @media only screen and (max-width: $bp-largest) {
+      //   display: none;
+      // }
 
       &__input {
         font-family: var(--primary-font);
@@ -50,8 +201,8 @@
         width: 3.5rem;
         border-radius: 50%;
         position: absolute;
-        top: 0.6rem;
-        right: 0.8rem;
+        bottom: 16px;
+        right: 26px;
         border: none;
         cursor: pointer;
         display: flex;
@@ -70,38 +221,6 @@
           stroke-width: 0;
           stroke: var(--white-1);
           fill: var(--white-1);
-        }
-      }
-    }
-
-    .infoBox {
-      padding-right: 2rem;
-
-      .infoList {
-        list-style: none;
-        display: flex;
-        align-items: center;
-        gap: 4rem;
-        font-family: var(--primary-font);
-        font-size: 1.6rem;
-
-        .contact {
-          .contactLink {
-            text-decoration: none;
-            color: var(--dark);
-          }
-        }
-
-        .login {
-          .loginLink {
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            padding: 0.8rem 0.8rem;
-            border: 1px solid var(--white-2);
-            border-radius: 20px;
-          }
         }
       }
     }

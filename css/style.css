@@ -55,6 +55,9 @@ body {
 .sectionCards {
   width: 100%;
   padding: 2rem 8%; }
+  @media only screen and (max-width: 50em) {
+    .sectionCards {
+      padding: 7rem 4%; } }
   .sectionCards .resultsContainer {
     padding: 8rem 0 2rem 0;
     display: flex;
@@ -72,22 +75,10 @@ body {
       font-family: var(--primary-font);
       font-size: 1.4rem;
       font-weight: 300; }
-      .sectionCards .resultsContainer .dropdownContainer .dropdown .sortBtn {
-        padding: 0.8rem 1.5rem;
-        background: none;
-        border: 1px solid var(--white-2);
-        font-weight: 100;
-        border-radius: 4px;
-        cursor: pointer; }
-        .sectionCards .resultsContainer .dropdownContainer .dropdown .sortBtn .icon {
-          display: inline-block;
-          width: 1em;
-          height: 1em;
-          stroke-width: 0;
-          stroke: var(--black-1);
-          fill: var(--black-1);
-          transform: scale(2);
-          margin-left: 4px; }
+      .sectionCards .resultsContainer .dropdownContainer #SortBy {
+        padding: 0.6rem 0 0.6rem 0.6rem;
+        border-color: var(--white-2);
+        border-radius: 4px; }
   .sectionCards .cardsContainer {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
@@ -179,9 +170,17 @@ body {
     gap: 5vw;
     font-family: var(--primary-font);
     padding: 8rem 5%; }
+    @media only screen and (max-width: 50em) {
+      .sectionFooter .footerContainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 10vw; } }
     .sectionFooter .footerContainer .left {
       display: flex;
       gap: 5vw; }
+      @media only screen and (max-width: 50em) {
+        .sectionFooter .footerContainer .left {
+          gap: 10vw; } }
     .sectionFooter .footerContainer .right {
       display: flex;
       gap: 5vw; }
@@ -209,7 +208,8 @@ body {
     .sectionFooter .footerContainer .sectionEmail .notifyForm {
       position: relative;
       border-radius: 4px;
-      overflow: hidden; }
+      overflow: hidden;
+      z-index: 5; }
       .sectionFooter .footerContainer .sectionEmail .notifyForm .inputBox .email {
         font-family: var(--primary-font);
         padding: 6px 8px;
@@ -245,6 +245,9 @@ body {
       justify-content: center;
       align-items: center;
       position: relative; }
+      @media only screen and (max-width: 62.5em) {
+        .sectionFooter .footerBrand .socialLinkContainer {
+          flex-direction: column-reverse; } }
       .sectionFooter .footerBrand .socialLinkContainer .playstoreLinks {
         display: flex;
         align-items: center;
@@ -252,6 +255,10 @@ body {
         position: absolute;
         left: 0;
         top: 2.5rem; }
+        @media only screen and (max-width: 62.5em) {
+          .sectionFooter .footerBrand .socialLinkContainer .playstoreLinks {
+            position: static;
+            margin-left: 2rem; } }
         .sectionFooter .footerBrand .socialLinkContainer .playstoreLinks .googleplayLink {
           display: block;
           height: 4rem;
@@ -272,6 +279,9 @@ body {
         display: flex;
         gap: 1rem;
         padding: 4rem 0; }
+        @media only screen and (max-width: 62.5em) {
+          .sectionFooter .footerBrand .socialLinkContainer .socialMediaBox {
+            padding: 2rem 0; } }
         .sectionFooter .footerBrand .socialLinkContainer .socialMediaBox .socialLink {
           display: flex;
           justify-content: center;
@@ -296,24 +306,143 @@ body {
               width: 1.6rem;
               fill: var(--white-0);
               transform: scale(1.2); }
+  .sectionFooter .copyrightBox {
+    width: 100%;
+    height: 4rem;
+    background-color: var(--red);
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .sectionFooter .copyrightBox .copyrightLink {
+      text-decoration: none;
+      color: var(--white-1);
+      font-family: var(--primary-font);
+      font-size: 1.4rem; }
 
 .navbar {
   position: fixed;
   padding: 1rem 2rem;
   width: 100%;
   border-bottom: 1px solid var(--white-2);
-  background-color: var(--white-1); }
+  background-color: var(--white-1);
+  z-index: 100; }
   .navbar .navbarContainer {
     display: flex;
-    justify-content: space-between;
-    align-items: center; }
-    .navbar .navbarContainer .logoBox .logo {
-      height: 4rem;
-      width: 100%; }
+    flex-direction: column;
+    gap: 2rem; }
+    .navbar .navbarContainer .navbarInitial {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .navbar .navbarContainer .navbarInitial .logoBox .logo {
+        height: 4rem;
+        width: 100%; }
+      .navbar .navbarContainer .navbarInitial .search {
+        display: flex;
+        width: 25%;
+        position: relative; }
+        @media only screen and (max-width: 62.5em) {
+          .navbar .navbarContainer .navbarInitial .search {
+            width: 30%; } }
+        @media only screen and (max-width: 50em) {
+          .navbar .navbarContainer .navbarInitial .search {
+            display: none; } }
+        .navbar .navbarContainer .navbarInitial .search__input {
+          font-family: var(--primary-font);
+          font-size: 1.4rem;
+          padding: 1.2rem 2rem;
+          color: var(--dark);
+          background-color: var(--white-1);
+          width: 100%;
+          border-radius: 40px;
+          border: 1px solid var(--white-2); }
+        .navbar .navbarContainer .navbarInitial .search__input:focus {
+          outline: none;
+          color: var(--dark); }
+        .navbar .navbarContainer .navbarInitial .search ::placeholder {
+          color: var(--dark);
+          font-family: var(--primary-font);
+          opacity: 0.9; }
+        .navbar .navbarContainer .navbarInitial .search__button {
+          background-color: var(--red);
+          height: 3.5rem;
+          width: 3.5rem;
+          border-radius: 50%;
+          position: absolute;
+          top: 0.6rem;
+          right: 0.8rem;
+          border: none;
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: all 0.1s ease-in; }
+          .navbar .navbarContainer .navbarInitial .search__button:hover {
+            background-color: var(--red-deep); }
+          .navbar .navbarContainer .navbarInitial .search__button .icon {
+            display: inline-block;
+            width: 2rem;
+            height: 2rem;
+            stroke-width: 0;
+            stroke: var(--white-1);
+            fill: var(--white-1); }
+      .navbar .navbarContainer .navbarInitial .infoBox {
+        padding-right: 2rem; }
+        @media only screen and (max-width: 50em) {
+          .navbar .navbarContainer .navbarInitial .infoBox {
+            padding-right: 0; } }
+        .navbar .navbarContainer .navbarInitial .infoBox .infoList {
+          list-style: none;
+          display: flex;
+          align-items: center;
+          gap: 4rem;
+          font-family: var(--primary-font);
+          font-size: 1.6rem; }
+          @media only screen and (max-width: 31.25em) {
+            .navbar .navbarContainer .navbarInitial .infoBox .infoList {
+              gap: 2rem; } }
+          @media only screen and (max-width: 31.25em) {
+            .navbar .navbarContainer .navbarInitial .infoBox .infoList .contact {
+              background-color: var(--red);
+              height: 3rem;
+              width: 3rem;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-radius: 50%; } }
+          .navbar .navbarContainer .navbarInitial .infoBox .infoList .contact .contactLink {
+            text-decoration: none;
+            color: var(--dark); }
+            @media only screen and (max-width: 31.25em) {
+              .navbar .navbarContainer .navbarInitial .infoBox .infoList .contact .contactLink {
+                display: none; } }
+          .navbar .navbarContainer .navbarInitial .infoBox .infoList .contact .contactLinkPhone {
+            text-decoration: none;
+            color: var(--dark);
+            display: none; }
+            @media only screen and (max-width: 31.25em) {
+              .navbar .navbarContainer .navbarInitial .infoBox .infoList .contact .contactLinkPhone {
+                display: contents; } }
+          .navbar .navbarContainer .navbarInitial .infoBox .infoList .login .loginLink {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 0.8rem 0.8rem;
+            border: 1px solid var(--white-2);
+            border-radius: 20px; }
+    .navbar .navbarContainer #searchTab {
+      display: none; }
+      @media only screen and (max-width: 50em) {
+        .navbar .navbarContainer #searchTab {
+          display: contents; } }
     .navbar .navbarContainer .search {
       display: flex;
       width: 25%;
       position: relative; }
+      @media only screen and (max-width: 62.5em) {
+        .navbar .navbarContainer .search {
+          width: 30%; } }
       .navbar .navbarContainer .search__input {
         font-family: var(--primary-font);
         font-size: 1.4rem;
@@ -336,8 +465,8 @@ body {
         width: 3.5rem;
         border-radius: 50%;
         position: absolute;
-        top: 0.6rem;
-        right: 0.8rem;
+        bottom: 16px;
+        right: 26px;
         border: none;
         cursor: pointer;
         display: flex;
@@ -353,23 +482,3 @@ body {
           stroke-width: 0;
           stroke: var(--white-1);
           fill: var(--white-1); }
-    .navbar .navbarContainer .infoBox {
-      padding-right: 2rem; }
-      .navbar .navbarContainer .infoBox .infoList {
-        list-style: none;
-        display: flex;
-        align-items: center;
-        gap: 4rem;
-        font-family: var(--primary-font);
-        font-size: 1.6rem; }
-        .navbar .navbarContainer .infoBox .infoList .contact .contactLink {
-          text-decoration: none;
-          color: var(--dark); }
-        .navbar .navbarContainer .infoBox .infoList .login .loginLink {
-          text-decoration: none;
-          display: flex;
-          align-items: center;
-          gap: 1.5rem;
-          padding: 0.8rem 0.8rem;
-          border: 1px solid var(--white-2);
-          border-radius: 20px; }

@@ -8,9 +8,19 @@
     font-family: var(--primary-font);
     padding: 8rem 5%;
 
+    @media only screen and (max-width: $bp-large) {
+      flex-direction: column;
+      align-items: center;
+      gap: 10vw;
+    }
+
     .left {
       display: flex;
       gap: 5vw;
+
+      @media only screen and (max-width: $bp-large) {
+        gap: 10vw;
+      }
     }
 
     .right {
@@ -58,6 +68,7 @@
         position: relative;
         border-radius: 4px;
         overflow: hidden;
+        z-index: 5;
 
         .inputBox {
           .email {
@@ -113,6 +124,10 @@
       align-items: center;
       position: relative;
 
+      @media only screen and (max-width: $bp-largest) {
+        flex-direction: column-reverse;
+      }
+
       .playstoreLinks {
         display: flex;
         align-items: center;
@@ -120,6 +135,11 @@
         position: absolute;
         left: 0;
         top: 2.5rem;
+
+        @media only screen and (max-width: $bp-largest) {
+          position: static;
+          margin-left: 2rem;
+        }
 
         .googleplayLink {
           display: block;
@@ -150,6 +170,10 @@
         display: flex;
         gap: 1rem;
         padding: 4rem 0;
+
+        @media only screen and (max-width: $bp-largest) {
+          padding: 2rem 0;
+        }
 
         .socialLink {
           display: flex;
@@ -185,6 +209,22 @@
           }
         }
       }
+    }
+  }
+
+  .copyrightBox {
+    width: 100%;
+    height: 4rem;
+    background-color: var(--red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .copyrightLink {
+      text-decoration: none;
+      color: var(--white-1);
+      font-family: var(--primary-font);
+      font-size: 1.4rem;
     }
   }
 }

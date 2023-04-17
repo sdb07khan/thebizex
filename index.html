@@ -30,15 +30,51 @@
     <main class="mainPage">
       <nav class="navbar">
         <div class="navbarContainer">
-          <div class="logoBox">
-            <img
-              src="img/bizex_logo_normal.png"
-              alt="logo image"
-              class="logo"
-            />
+          <div class="navbarInitial">
+            <div class="logoBox">
+              <img
+                src="img/bizex_logo_normal.png"
+                alt="logo image"
+                class="logo"
+              />
+            </div>
+
+            <form action="#" class="search">
+              <input
+                type="text"
+                class="search__input"
+                placeholder="Start your search"
+              />
+              <button type="button" class="search__button">
+                <img src="img/search.svg" alt="search icon" class="icon" />
+              </button>
+            </form>
+
+            <div class="infoBox">
+              <ul class="infoList">
+                <li class="contact">
+                  <a href="tel: +18773371188" class="contactLink">
+                    <i class="fa-solid fa-phone" style="color: #000000"></i>
+                    1-877-337-1188</a
+                  >
+                  <a href="tel: +18773371188" class="contactLinkPhone">
+                    <i class="fa-solid fa-phone" style="color: #000000"></i>
+                  </a>
+                </li>
+                <li class="login">
+                  <a href="#" class="loginLink">
+                    <i class="fa-solid fa-bars" style="color: #343a40"></i>
+                    <i
+                      class="fa-solid fa-circle-user fa-xl"
+                      style="color: #bbbdbf"
+                    ></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
 
-          <form action="#" class="search">
+          <form action="#" class="search" id="searchTab">
             <input
               type="text"
               class="search__input"
@@ -48,26 +84,6 @@
               <img src="img/search.svg" alt="search icon" class="icon" />
             </button>
           </form>
-
-          <div class="infoBox">
-            <ul class="infoList">
-              <li class="contact">
-                <a href="tel: +18773371188" class="contactLink">
-                  <i class="fa-solid fa-phone" style="color: #000000"></i>
-                  1-877-337-1188</a
-                >
-              </li>
-              <li class="login">
-                <a href="#" class="loginLink">
-                  <i class="fa-solid fa-bars" style="color: #343a40"></i>
-                  <i
-                    class="fa-solid fa-circle-user fa-xl"
-                    style="color: #bbbdbf"
-                  ></i>
-                </a>
-              </li>
-            </ul>
-          </div>
         </div>
       </nav>
 
@@ -75,7 +91,21 @@
         <div class="resultsContainer">
           <div class="results"><span>Results :</span></div>
           <div class="dropdownContainer">
-            <div class="sortText"><span>Sort Listing by </span></div>
+            <form action="/action_page.php">
+              <label for="Sort By">Sort Listing by </label>
+              <select name="Sort By" id="SortBy">
+                <option value="Sort By" disabled selected>Sort By</option>
+                <option value="AtoZ">A to Z</option>
+                <option value="ZtoA">Z to A</option>
+                <option value="Min-Max Price">Min-Max Price</option>
+                <option value="Max-Min Price">Max-Min Price</option>
+                <option value="New-Old">New-Old</option>
+                <option value="Old-New">Old-New</option>
+                <option value="Canada">Canada</option>
+                <option value="USA">USA</option>
+              </select>
+            </form>
+            <!-- <div class="sortText"><span>Sort Listing by </span></div>
             <div class="dropdown">
               <button type="button" class="sortBtn">
                 Sort By
@@ -85,13 +115,13 @@
                   class="icon"
                 />
               </button>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="cardsContainer">
           <div class="businessCard">
             <div class="businessCard__imageContainer">
-              <a href="#" class="imageLink">
+              <a href="/postDetails.html" class="imageLink" target="_blank">
                 <div class="imageBox">
                   <img
                     src="img/Gas station.jpeg"
@@ -106,26 +136,28 @@
                 <p class="locationText">Spanish, Ontario, Canada</p>
               </div>
               <h5 class="businessHeading">
-                <a href="#" class="headingText"
+                <a href="/postDetails.html" class="headingText" target="_blank"
                   >Profitable Gas Station for sale in Spanish,ON</a
                 >
               </h5>
               <div class="businessCategory">
                 <div class="categoryHead">Category</div>
                 <div class="categoryName">
-                  <a href="#" class="categoryName__link">Business For Sale</a>
+                  <a href="#" class="categoryName__link" target="_blank"
+                    >Business For Sale</a
+                  >
                 </div>
               </div>
               <div class="businessIndustry">
                 <div class="industryHead">Industry</div>
                 <div class="industryName">
-                  <a href="#" class="industryName__link"
+                  <a href="#" class="industryName__link" target="_blank"
                     >Gas Stations & Car Washes for Sale</a
                   >
                 </div>
               </div>
               <div class="businessPrice">
-                <a href="#" class="businessPrice__link">
+                <a href="#" class="businessPrice__link" target="_blank">
                   <div class="businessPrice__link--text">$ 1,150,000</div>
                 </a>
               </div>
@@ -871,6 +903,11 @@
               ></a>
             </div>
           </div>
+        </div>
+        <div class="copyrightBox">
+          <a href="#" class="copyrightLink"
+            ><span>Copyright © 2023 - Business Exchange</span></a
+          >
         </div>
       </footer>
     </main>
