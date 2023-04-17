@@ -216,6 +216,9 @@ body {
         border: none;
         min-width: 20rem;
         width: 25rem; }
+        @media only screen and (max-width: 31.25em) {
+          .sectionFooter .footerContainer .sectionEmail .notifyForm .inputBox .email {
+            width: 20rem; } }
       .sectionFooter .footerContainer .sectionEmail .notifyForm .inputBox .email:focus {
         outline: none;
         color: var(--dark); }

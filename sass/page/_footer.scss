@@ -77,6 +77,10 @@
             border: none;
             min-width: 20rem;
             width: 25rem;
+
+            @media only screen and (max-width: $bp-medium) {
+              width: 20rem;
+            }
           }
 
           .email:focus {
