@@ -233,6 +233,9 @@ body {
         right: 0;
         top: 0;
         cursor: pointer; }
+        @media only screen and (max-width: 31.25em) {
+          .sectionFooter .footerContainer .sectionEmail .notifyForm .notifyBtn {
+            padding: 8px 8px; } }
         .sectionFooter .footerContainer .sectionEmail .notifyForm .notifyBtn:hover {
           background-color: var(--red-deep); }
   .sectionFooter .footerBrand {
