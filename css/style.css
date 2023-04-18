@@ -69,6 +69,9 @@ body {
       row-gap: 2rem;
       column-gap: 2rem;
       place-content: center; }
+      @media only screen and (max-width: 50em) {
+        .postDetailSection .postDetailContainer .imageContainer {
+          padding-top: 3rem; } }
       .postDetailSection .postDetailContainer .imageContainer .imageBox {
         height: 40rem;
         width: 100%;
@@ -301,7 +304,8 @@ body {
                   font-family: var(--primary-font);
                   font-size: 1.4rem; }
             .postDetailSection .postDetailContainer .leftDetails .contactFormContainer .contactFormBox .contactForm #checkboxContainer {
-              border: none !important; }
+              border: none !important;
+              padding-left: 4px; }
               .postDetailSection .postDetailContainer .leftDetails .contactFormContainer .contactFormBox .contactForm #checkboxContainer .checkboxText {
                 font-family: var(--primary-font);
                 font-size: 1.2rem;

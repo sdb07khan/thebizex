@@ -17,6 +17,10 @@
       column-gap: 2rem;
       place-content: center;
 
+      @media only screen and (max-width: $bp-large) {
+        padding-top: 3rem;
+      }
+
       .imageBox {
         height: 40rem;
         width: 100%;
@@ -381,6 +385,7 @@
 
             #checkboxContainer {
               border: none !important;
+              padding-left: 4px;
 
               .checkboxText {
                 font-family: var(--primary-font);
