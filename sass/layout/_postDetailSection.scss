@@ -2,6 +2,11 @@
   width: 100%;
   padding: 2rem 8%;
 
+  // @media only screen and (max-width: $bp-large) {
+  //   display: flex;
+  //   justify-content: center;
+  // }
+
   .postDetailContainer {
     padding: 8rem 0 2rem 0;
 
@@ -35,6 +40,10 @@
       .postDetailBox {
         width: 75vw;
         min-width: 30vw;
+
+        @media only screen and (max-width: $bp-large) {
+          width: 90vw;
+        }
 
         .detailContainer {
           font-family: var(--primary-font);
@@ -113,6 +122,10 @@
                 gap: 1rem;
                 border-bottom: 1px solid var(--white-2);
 
+                @media only screen and (max-width: $bp-large) {
+                  border-top: 1px solid var(--white-2);
+                }
+
                 .shareText {
                   font-family: var(--primary-font);
                   font-size: 1.6rem;
@@ -189,6 +202,15 @@
                   padding: 12px 0;
                 }
 
+                .slick-dots li.slick-active button:before {
+                  opacity: 1 !important;
+                  color: var(--red) !important;
+                }
+
+                .slick-dots li button:before {
+                  font-size: 12px !important;
+                }
+
                 .businessCard {
                   border-radius: 6px;
                   font-family: var(--primary-font);
@@ -255,6 +277,15 @@
         }
       }
 
+      #contactFormPhone {
+        display: none;
+
+        @media only screen and (max-width: $bp-large) {
+          display: contents;
+          position: relative;
+        }
+      }
+
       .contactFormContainer {
         background-color: #fff;
         box-shadow: 0 4px 8px rgba(#3490dc, 0.5);
@@ -264,8 +295,16 @@
         position: sticky;
         top: 7rem;
 
+        @media only screen and (max-width: $bp-large) {
+          display: none;
+        }
+
         .contactFormBox {
           font-family: var(--primary-font);
+
+          @media only screen and (max-width: $bp-large) {
+            padding-top: 2rem;
+          }
 
           .formHeading {
             &__text {

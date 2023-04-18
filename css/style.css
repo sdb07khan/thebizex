@@ -86,6 +86,9 @@ body {
       .postDetailSection .postDetailContainer .leftDetails .postDetailBox {
         width: 75vw;
         min-width: 30vw; }
+        @media only screen and (max-width: 50em) {
+          .postDetailSection .postDetailContainer .leftDetails .postDetailBox {
+            width: 90vw; } }
         .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer {
           font-family: var(--primary-font); }
           .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer .postHeading {
@@ -133,6 +136,9 @@ body {
             padding: 1.5rem 0;
             gap: 1rem;
             border-bottom: 1px solid var(--white-2); }
+            @media only screen and (max-width: 50em) {
+              .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer .shareContainer .shareBox .shareList {
+                border-top: 1px solid var(--white-2); } }
             .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer .shareContainer .shareBox .shareList .shareText {
               font-family: var(--primary-font);
               font-size: 1.6rem;
@@ -183,6 +189,11 @@ body {
             .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer .similarPostContainer .similarPostBox .similarPostBox-slider .slick-list {
               margin: 0 -8px;
               padding: 12px 0; }
+            .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer .similarPostContainer .similarPostBox .similarPostBox-slider .slick-dots li.slick-active button:before {
+              opacity: 1 !important;
+              color: var(--red) !important; }
+            .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer .similarPostContainer .similarPostBox .similarPostBox-slider .slick-dots li button:before {
+              font-size: 12px !important; }
             .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer .similarPostContainer .similarPostBox .similarPostBox-slider .businessCard {
               border-radius: 6px;
               font-family: var(--primary-font);
@@ -217,6 +228,12 @@ body {
                     font-size: 1.6rem;
                     font-weight: 700;
                     letter-spacing: 1px; }
+      .postDetailSection .postDetailContainer .leftDetails #contactFormPhone {
+        display: none; }
+        @media only screen and (max-width: 50em) {
+          .postDetailSection .postDetailContainer .leftDetails #contactFormPhone {
+            display: contents;
+            position: relative; } }
       .postDetailSection .postDetailContainer .leftDetails .contactFormContainer {
         background-color: #fff;
         box-shadow: 0 4px 8px rgba(52, 144, 220, 0.5);
@@ -225,8 +242,14 @@ body {
         border-radius: 8px;
         position: sticky;
         top: 7rem; }
+        @media only screen and (max-width: 50em) {
+          .postDetailSection .postDetailContainer .leftDetails .contactFormContainer {
+            display: none; } }
         .postDetailSection .postDetailContainer .leftDetails .contactFormContainer .contactFormBox {
           font-family: var(--primary-font); }
+          @media only screen and (max-width: 50em) {
+            .postDetailSection .postDetailContainer .leftDetails .contactFormContainer .contactFormBox {
+              padding-top: 2rem; } }
           .postDetailSection .postDetailContainer .leftDetails .contactFormContainer .contactFormBox .formHeading__text {
             font-size: 2rem;
             font-weight: 600;
