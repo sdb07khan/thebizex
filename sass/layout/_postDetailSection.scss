@@ -1,0 +1,374 @@
+.postDetailSection {
+  width: 100%;
+  padding: 2rem 8%;
+
+  .postDetailContainer {
+    padding: 8rem 0 2rem 0;
+
+    .imageContainer {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+      row-gap: 2rem;
+      column-gap: 2rem;
+      place-content: center;
+
+      .imageBox {
+        height: 40rem;
+        width: 100%;
+        display: flex;
+
+        .image {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          border-radius: 8px;
+        }
+      }
+    }
+
+    .leftDetails {
+      padding: 4rem 0;
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+
+      .postDetailBox {
+        width: 75vw;
+        min-width: 30vw;
+
+        .detailContainer {
+          font-family: var(--primary-font);
+
+          .postHeading {
+            font-size: 2rem;
+            font-weight: 500;
+            color: var(--dark);
+          }
+
+          .categoryContainer {
+            border-bottom: 1px solid var(--white-2);
+
+            .categoryListBox {
+              padding-top: 5rem;
+              padding-bottom: 2rem;
+
+              .salePrice {
+                list-style: none;
+
+                &__text {
+                  font-family: inherit;
+                  font-size: 1.6rem;
+                }
+              }
+            }
+
+            .categoryList {
+              list-style: none;
+              font-family: inherit;
+              font-size: 1.6rem;
+              display: flex;
+              gap: 1rem;
+
+              .categoryHead {
+                text-transform: uppercase;
+                font-weight: 700;
+                color: var(--dark);
+              }
+
+              .categoryName {
+                &__link {
+                  text-decoration: none;
+                  color: var(--blue);
+                }
+
+                .location__link {
+                  color: var(--dark);
+                }
+              }
+            }
+          }
+
+          .businessInfoContainer {
+            padding-top: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--white-2);
+
+            .businessInfoList {
+              list-style: none;
+
+              .businessDetails {
+                font-family: inherit;
+                font-size: 1.6rem;
+              }
+            }
+          }
+
+          .shareContainer {
+            .shareBox {
+              .shareList {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 1.5rem 0;
+                gap: 1rem;
+                border-bottom: 1px solid var(--white-2);
+
+                .shareText {
+                  font-family: var(--primary-font);
+                  font-size: 1.6rem;
+                  padding-right: 1.5rem;
+                }
+
+                .shareLink {
+                  text-decoration: none;
+
+                  .icon {
+                    background-color: var(--white-1);
+                    padding: 0.5rem 1.2rem;
+                    box-shadow: 0px 1px 2px rgba(#000000, 0.3);
+                    border-radius: 4px;
+
+                    svg {
+                      height: 17px;
+                      width: 17px;
+                      fill: #333;
+                      position: relative;
+                      vertical-align: middle;
+                      overflow: hidden;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .similarPostContainer {
+            .similarPostBox {
+              .similarPostBox-slider {
+                padding-top: 6rem;
+                position: relative;
+
+                .slick-arrow {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 36px;
+                  height: 36px;
+                }
+
+                .slick-prev {
+                  background: none;
+                  left: unset;
+                  right: 50px;
+                  top: 35px;
+
+                  &::before {
+                    color: var(--red);
+                    font-size: 30px;
+                  }
+                }
+                .slick-next {
+                  background: none;
+                  left: unset;
+                  right: 0;
+                  top: 35px;
+                  &::before {
+                    color: var(--red);
+                    font-size: 30px;
+                  }
+                }
+
+                /* the slides */
+                .slick-slide {
+                  margin: 0 8px;
+                }
+
+                /* the parent */
+                .slick-list {
+                  margin: 0 -8px;
+                  padding: 12px 0;
+                }
+
+                .businessCard {
+                  border-radius: 6px;
+                  font-family: var(--primary-font);
+                  background-color: var(--white-0);
+                  -webkit-box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.4);
+                  -moz-box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.4);
+                  box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.4);
+                  overflow: hidden;
+
+                  &__imageContainer {
+                    .imageLink {
+                      .imageBox {
+                        .image {
+                          height: 15rem;
+                          width: 100%;
+                          object-fit: cover;
+                        }
+                      }
+                    }
+                  }
+
+                  &__details {
+                    padding: 1rem;
+                    padding-top: 0.5rem;
+
+                    .businessLocation {
+                      .locationText {
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                      }
+                    }
+
+                    .businessHeading {
+                      padding: 1.2rem 0;
+
+                      .headingText {
+                        text-decoration: none;
+                        font-size: 1.5rem;
+                        font-family: 600;
+                        color: var(--black-1);
+                        line-height: 1;
+                      }
+                    }
+
+                    .businessPrice {
+                      padding: 1rem 0 1.2rem 0;
+
+                      &__link {
+                        text-decoration: none;
+                        color: var(--red);
+                        font-size: 1.6rem;
+                        font-weight: 700;
+                        letter-spacing: 1px;
+
+                        &--text {
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .contactFormContainer {
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(#3490dc, 0.5);
+        padding: 2.5rem 2rem;
+        border: 1px solid var(--blue);
+        border-radius: 8px;
+        position: sticky;
+        top: 7rem;
+
+        .contactFormBox {
+          font-family: var(--primary-font);
+
+          .formHeading {
+            &__text {
+              font-size: 2rem;
+              font-weight: 600;
+              margin-bottom: 1rem;
+            }
+
+            &__para {
+              font-size: 1.4rem;
+              margin-bottom: 1rem;
+            }
+          }
+
+          .contactForm {
+            display: flex;
+            flex-direction: column;
+            justify-content: stretch;
+            gap: 1.5rem;
+            padding: 2rem 0;
+            width: 100%;
+
+            .inputContainer {
+              display: flex;
+              border: 1px solid var(--white-2);
+              border-radius: 6px;
+              overflow: hidden;
+
+              .inputIcon {
+                padding: 1.2rem 1.5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-right: 1px solid var(--white-2);
+              }
+
+              .inputField {
+                padding: 1.2rem 0.8rem;
+                width: 100%;
+                border: none;
+                outline: none;
+                font-family: inherit;
+                font-size: 1.4rem;
+
+                &:focus {
+                  outline: none;
+                }
+
+                &::placeholder {
+                  font-family: var(--primary-font);
+                  font-size: 1.4rem;
+                }
+              }
+
+              .message {
+                padding: 1.2rem 1.2rem;
+                width: 100%;
+                border: 0px solid var(--white-2);
+                border-radius: 6px;
+                resize: vertical;
+                font-family: inherit;
+                font-size: 1.4rem;
+
+                &:focus {
+                  outline: none;
+                }
+
+                &::placeholder {
+                  font-family: var(--primary-font);
+                  font-size: 1.4rem;
+                }
+              }
+            }
+
+            #checkboxContainer {
+              border: none !important;
+
+              .checkboxText {
+                font-family: var(--primary-font);
+                font-size: 1.2rem;
+                font-weight: 600;
+                padding-left: 1rem;
+                color: var(--blue);
+              }
+            }
+
+            .submitBtn {
+              padding: 1rem 2rem;
+              font-family: var(--primary-font);
+              font-size: 1.4rem;
+              color: var(--white-1);
+              background-color: var(--red);
+              border-radius: 6px;
+              border: none;
+              cursor: pointer;
+
+              &:hover {
+                background-color: var(--red-deep);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -44,6 +44,12 @@ body {
   max-width: 180rem;
   margin-inline: auto; }
 
+.ui-corner-all {
+  padding: 0.5rem 0rem !important;
+  font-family: var(--primary-font);
+  font-size: 1.5rem;
+  border-bottom: 1px solid var(--white-2) !important; }
+
 .h3__footer {
   text-transform: uppercase;
   font-size: 1.6rem;
@@ -51,6 +57,245 @@ body {
   color: var(--white-0);
   letter-spacing: 1px;
   padding-bottom: 12px; }
+
+.postDetailSection {
+  width: 100%;
+  padding: 2rem 8%; }
+  .postDetailSection .postDetailContainer {
+    padding: 8rem 0 2rem 0; }
+    .postDetailSection .postDetailContainer .imageContainer {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+      row-gap: 2rem;
+      column-gap: 2rem;
+      place-content: center; }
+      .postDetailSection .postDetailContainer .imageContainer .imageBox {
+        height: 40rem;
+        width: 100%;
+        display: flex; }
+        .postDetailSection .postDetailContainer .imageContainer .imageBox .image {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          border-radius: 8px; }
+    .postDetailSection .postDetailContainer .leftDetails {
+      padding: 4rem 0;
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start; }
+      .postDetailSection .postDetailContainer .leftDetails .postDetailBox {
+        width: 75vw;
+        min-width: 30vw; }
+        .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer {
+          font-family: var(--primary-font); }
+          .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer .postHeading {
+            font-size: 2rem;
+            font-weight: 500;
+            color: var(--dark); }
+          .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer .categoryContainer {
+            border-bottom: 1px solid var(--white-2); }
+            .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer .categoryContainer .categoryListBox {
+              padding-top: 5rem;
+              padding-bottom: 2rem; }
+              .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer .categoryContainer .categoryListBox .salePrice {
+                list-style: none; }
+                .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer .categoryContainer .categoryListBox .salePrice__text {
+                  font-family: inherit;
+                  font-size: 1.6rem; }
+            .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer .categoryContainer .categoryList {
+              list-style: none;
+              font-family: inherit;
+              font-size: 1.6rem;
+              display: flex;
+              gap: 1rem; }
+              .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer .categoryContainer .categoryList .categoryHead {
+                text-transform: uppercase;
+                font-weight: 700;
+                color: var(--dark); }
+              .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer .categoryContainer .categoryList .categoryName__link {
+                text-decoration: none;
+                color: var(--blue); }
+              .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer .categoryContainer .categoryList .categoryName .location__link {
+                color: var(--dark); }
+          .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer .businessInfoContainer {
+            padding-top: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--white-2); }
+            .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer .businessInfoContainer .businessInfoList {
+              list-style: none; }
+              .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer .businessInfoContainer .businessInfoList .businessDetails {
+                font-family: inherit;
+                font-size: 1.6rem; }
+          .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer .shareContainer .shareBox .shareList {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 1.5rem 0;
+            gap: 1rem;
+            border-bottom: 1px solid var(--white-2); }
+            .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer .shareContainer .shareBox .shareList .shareText {
+              font-family: var(--primary-font);
+              font-size: 1.6rem;
+              padding-right: 1.5rem; }
+            .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer .shareContainer .shareBox .shareList .shareLink {
+              text-decoration: none; }
+              .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer .shareContainer .shareBox .shareList .shareLink .icon {
+                background-color: var(--white-1);
+                padding: 0.5rem 1.2rem;
+                box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+                border-radius: 4px; }
+                .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer .shareContainer .shareBox .shareList .shareLink .icon svg {
+                  height: 17px;
+                  width: 17px;
+                  fill: #333;
+                  position: relative;
+                  vertical-align: middle;
+                  overflow: hidden; }
+          .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer .similarPostContainer .similarPostBox .similarPostBox-slider {
+            padding-top: 6rem;
+            position: relative;
+            /* the slides */
+            /* the parent */ }
+            .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer .similarPostContainer .similarPostBox .similarPostBox-slider .slick-arrow {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 36px;
+              height: 36px; }
+            .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer .similarPostContainer .similarPostBox .similarPostBox-slider .slick-prev {
+              background: none;
+              left: unset;
+              right: 50px;
+              top: 35px; }
+              .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer .similarPostContainer .similarPostBox .similarPostBox-slider .slick-prev::before {
+                color: var(--red);
+                font-size: 30px; }
+            .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer .similarPostContainer .similarPostBox .similarPostBox-slider .slick-next {
+              background: none;
+              left: unset;
+              right: 0;
+              top: 35px; }
+              .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer .similarPostContainer .similarPostBox .similarPostBox-slider .slick-next::before {
+                color: var(--red);
+                font-size: 30px; }
+            .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer .similarPostContainer .similarPostBox .similarPostBox-slider .slick-slide {
+              margin: 0 8px; }
+            .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer .similarPostContainer .similarPostBox .similarPostBox-slider .slick-list {
+              margin: 0 -8px;
+              padding: 12px 0; }
+            .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer .similarPostContainer .similarPostBox .similarPostBox-slider .businessCard {
+              border-radius: 6px;
+              font-family: var(--primary-font);
+              background-color: var(--white-0);
+              -webkit-box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.4);
+              -moz-box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.4);
+              box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.4);
+              overflow: hidden; }
+              .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer .similarPostContainer .similarPostBox .similarPostBox-slider .businessCard__imageContainer .imageLink .imageBox .image {
+                height: 15rem;
+                width: 100%;
+                object-fit: cover; }
+              .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer .similarPostContainer .similarPostBox .similarPostBox-slider .businessCard__details {
+                padding: 1rem;
+                padding-top: 0.5rem; }
+                .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer .similarPostContainer .similarPostBox .similarPostBox-slider .businessCard__details .businessLocation .locationText {
+                  font-size: 1.2rem;
+                  font-weight: 400; }
+                .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer .similarPostContainer .similarPostBox .similarPostBox-slider .businessCard__details .businessHeading {
+                  padding: 1.2rem 0; }
+                  .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer .similarPostContainer .similarPostBox .similarPostBox-slider .businessCard__details .businessHeading .headingText {
+                    text-decoration: none;
+                    font-size: 1.5rem;
+                    font-family: 600;
+                    color: var(--black-1);
+                    line-height: 1; }
+                .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer .similarPostContainer .similarPostBox .similarPostBox-slider .businessCard__details .businessPrice {
+                  padding: 1rem 0 1.2rem 0; }
+                  .postDetailSection .postDetailContainer .leftDetails .postDetailBox .detailContainer .similarPostContainer .similarPostBox .similarPostBox-slider .businessCard__details .businessPrice__link {
+                    text-decoration: none;
+                    color: var(--red);
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                    letter-spacing: 1px; }
+      .postDetailSection .postDetailContainer .leftDetails .contactFormContainer {
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(52, 144, 220, 0.5);
+        padding: 2.5rem 2rem;
+        border: 1px solid var(--blue);
+        border-radius: 8px;
+        position: sticky;
+        top: 7rem; }
+        .postDetailSection .postDetailContainer .leftDetails .contactFormContainer .contactFormBox {
+          font-family: var(--primary-font); }
+          .postDetailSection .postDetailContainer .leftDetails .contactFormContainer .contactFormBox .formHeading__text {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem; }
+          .postDetailSection .postDetailContainer .leftDetails .contactFormContainer .contactFormBox .formHeading__para {
+            font-size: 1.4rem;
+            margin-bottom: 1rem; }
+          .postDetailSection .postDetailContainer .leftDetails .contactFormContainer .contactFormBox .contactForm {
+            display: flex;
+            flex-direction: column;
+            justify-content: stretch;
+            gap: 1.5rem;
+            padding: 2rem 0;
+            width: 100%; }
+            .postDetailSection .postDetailContainer .leftDetails .contactFormContainer .contactFormBox .contactForm .inputContainer {
+              display: flex;
+              border: 1px solid var(--white-2);
+              border-radius: 6px;
+              overflow: hidden; }
+              .postDetailSection .postDetailContainer .leftDetails .contactFormContainer .contactFormBox .contactForm .inputContainer .inputIcon {
+                padding: 1.2rem 1.5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-right: 1px solid var(--white-2); }
+              .postDetailSection .postDetailContainer .leftDetails .contactFormContainer .contactFormBox .contactForm .inputContainer .inputField {
+                padding: 1.2rem 0.8rem;
+                width: 100%;
+                border: none;
+                outline: none;
+                font-family: inherit;
+                font-size: 1.4rem; }
+                .postDetailSection .postDetailContainer .leftDetails .contactFormContainer .contactFormBox .contactForm .inputContainer .inputField:focus {
+                  outline: none; }
+                .postDetailSection .postDetailContainer .leftDetails .contactFormContainer .contactFormBox .contactForm .inputContainer .inputField::placeholder {
+                  font-family: var(--primary-font);
+                  font-size: 1.4rem; }
+              .postDetailSection .postDetailContainer .leftDetails .contactFormContainer .contactFormBox .contactForm .inputContainer .message {
+                padding: 1.2rem 1.2rem;
+                width: 100%;
+                border: 0px solid var(--white-2);
+                border-radius: 6px;
+                resize: vertical;
+                font-family: inherit;
+                font-size: 1.4rem; }
+                .postDetailSection .postDetailContainer .leftDetails .contactFormContainer .contactFormBox .contactForm .inputContainer .message:focus {
+                  outline: none; }
+                .postDetailSection .postDetailContainer .leftDetails .contactFormContainer .contactFormBox .contactForm .inputContainer .message::placeholder {
+                  font-family: var(--primary-font);
+                  font-size: 1.4rem; }
+            .postDetailSection .postDetailContainer .leftDetails .contactFormContainer .contactFormBox .contactForm #checkboxContainer {
+              border: none !important; }
+              .postDetailSection .postDetailContainer .leftDetails .contactFormContainer .contactFormBox .contactForm #checkboxContainer .checkboxText {
+                font-family: var(--primary-font);
+                font-size: 1.2rem;
+                font-weight: 600;
+                padding-left: 1rem;
+                color: var(--blue); }
+            .postDetailSection .postDetailContainer .leftDetails .contactFormContainer .contactFormBox .contactForm .submitBtn {
+              padding: 1rem 2rem;
+              font-family: var(--primary-font);
+              font-size: 1.4rem;
+              color: var(--white-1);
+              background-color: var(--red);
+              border-radius: 6px;
+              border: none;
+              cursor: pointer; }
+              .postDetailSection .postDetailContainer .leftDetails .contactFormContainer .contactFormBox .contactForm .submitBtn:hover {
+                background-color: var(--red-deep); }
 
 .sectionCards {
   width: 100%;
