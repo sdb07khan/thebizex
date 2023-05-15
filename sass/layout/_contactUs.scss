@@ -1,0 +1,203 @@
+.contactUsDetailSection {
+  width: 100%;
+  padding: 2rem 8%;
+  background-color: #fff;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2rem 1rem;
+  }
+
+  .postDetailContainer {
+    display: flex;
+    box-shadow: 0 4px 8px rgba(#1f1f22, 0.5);
+    border: 1px solid var(--black-0);
+    border-radius: 8px;
+    margin-top: 6rem;
+
+    @media only screen and (max-width: $bp-large) {
+      margin-top: 10rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .leftDetails {
+      width: 60vw;
+      padding: 4rem 6rem;
+      border-right: 1px solid var(--white-2);
+
+      @media only screen and (max-width: $bp-large) {
+        width: 100%;
+        border-bottom: 1px solid var(--white-2);
+        border-right: none;
+      }
+
+      @media only screen and (max-width: $bp-medium) {
+        padding: 2rem;
+      }
+
+      .contactFormContainer {
+        .contactFormBox {
+          font-family: var(--primary-font);
+
+          @media only screen and (max-width: $bp-large) {
+            padding-top: 2rem;
+          }
+
+          .formHeading {
+            &__text {
+              font-size: 2rem;
+              font-weight: 600;
+              margin-bottom: 1rem;
+            }
+
+            &__para {
+              font-size: 1.4rem;
+              margin-bottom: 1rem;
+            }
+          }
+
+          .contactForm {
+            display: flex;
+            flex-direction: column;
+            justify-content: stretch;
+            gap: 1.5rem;
+            padding: 1rem 0;
+            width: 100%;
+
+            #inputRow1 {
+              display: flex;
+              gap: 2rem;
+
+              @media only screen and (max-width: $bp-large) {
+                flex-direction: column;
+              }
+            }
+
+            #inputRow2 {
+              display: flex;
+              gap: 2rem;
+
+              @media only screen and (max-width: $bp-large) {
+                flex-direction: column;
+              }
+            }
+
+            .inputContainer {
+              display: flex;
+              border: 1px solid var(--white-2);
+              border-radius: 6px;
+              overflow: hidden;
+              flex: 1;
+              flex-basis: 50%;
+
+              .inputIcon {
+                padding: 1.2rem 1.5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-right: 1px solid var(--white-2);
+              }
+
+              .inputField {
+                padding: 1.2rem 0.8rem;
+                width: 100%;
+                border: none;
+                outline: none;
+                font-family: inherit;
+                font-size: 1.4rem;
+
+                &:focus {
+                  outline: none;
+                }
+
+                &::placeholder {
+                  font-family: var(--primary-font);
+                  font-size: 1.4rem;
+                }
+              }
+
+              .message {
+                padding: 1.2rem 1.2rem;
+                width: 100%;
+                border: 0px solid var(--white-2);
+                border-radius: 6px;
+                resize: vertical;
+                font-family: inherit;
+                font-size: 1.4rem;
+
+                &:focus {
+                  outline: none;
+                }
+
+                &::placeholder {
+                  font-family: var(--primary-font);
+                  font-size: 1.4rem;
+                }
+              }
+            }
+
+            .submitBtn {
+              padding: 1rem 2rem;
+              font-family: var(--primary-font);
+              font-size: 1.4rem;
+              color: var(--white-1);
+              background-color: var(--red);
+              border-radius: 6px;
+              border: none;
+              cursor: pointer;
+              width: 15rem;
+
+              &:hover {
+                background-color: var(--red-deep);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .rightDetails {
+      width: 35%;
+      font-size: 2rem;
+      padding: 4rem;
+
+      @media only screen and (max-width: $bp-large) {
+        width: 100%;
+        padding: 4rem 6rem;
+      }
+
+      @media only screen and (max-width: $bp-medium) {
+        padding: 4rem 2.5rem;
+      }
+
+      .contactInfoContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+
+        .contactInfoBox {
+          font-family: var(--primary-font);
+
+          .contactHeadingBox {
+            .contactHeading {
+              font-size: 1.5rem;
+              font-weight: 500;
+            }
+          }
+
+          .contactDetailBox {
+            .contactDetail {
+              font-size: 1.2rem;
+              font-weight: 400;
+              text-decoration: none;
+              color: var(--black-0);
+              display: inline-flex;
+              gap: 1rem;
+              align-items: baseline;
+            }
+          }
+        }
+      }
+    }
+  }
+}

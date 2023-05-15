@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://thebizex.com/images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+      integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Business For Sale | Business Exchange</title>
+  </head>
+  <body>
+    <main class="mainPage">
+        <nav class="navbar">
+            <div class="navbarContainer">
+              <div class="navbarInitial">
+                <div class="logoBox">
+                  <img
+                    src="img/bizex_logo_normal.png"
+                    alt="logo image"
+                    class="logo"
+                  />
+                </div>
+      
+                <form action="#" class="search">
+                  <input
+                    type="text"
+                    class="search__input"
+                    placeholder="Start your search"
+                  />
+                  <button type="button" class="search__button">
+                    <img src="img/search.svg" alt="search icon" class="icon" />
+                  </button>
+                </form>
+      
+                <div class="infoBox">
+                  <div class="contact">
+                    <a href="tel: +18773371188" class="contactLink">
+                      <i class="fa-solid fa-phone" style="color: #000000"></i>
+                      1-877-337-1188</a
+                    >
+                    <a href="tel: +18773371188" class="contactLinkPhone">
+                      <i class="fa-solid fa-phone" style="color: #000000"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- <form action="#" class="search" id="searchTab">
+                <input
+                  type="text"
+                  class="search__input"
+                  placeholder="Start your search"
+                />
+                <button type="button" class="search__button">
+                  <img src="img/search.svg" alt="search icon" class="icon" />
+                </button>
+              </form> -->
+            </div>
+          </nav>
+
+          <section class="contactUsDetailSection">
+            <div class="postDetailContainer">   
+              <div class="leftDetails">
+                <div class="contactFormContainer">
+                  <div class="contactFormBox">
+                    <div class="formHeading">
+                      <h2 class="formHeading__text">We'd love to hear from you</h2>
+                      <p class="formHeading__para">
+                        Please fill out the quick form and we will be in touch with you soon.
+                      </p>
+                    </div>
+                    <form class="contactForm">
+                        <div id="inputRow1">
+                            <div class="inputContainer">
+                                <div class="inputIcon">
+                                  <i
+                                    class="fa-solid fa-user fa-xl"
+                                    style="color: #343a40"
+                                  ></i>
+                                </div>
+                                <input
+                                  maxlength="50"
+                                  minlength="3"
+                                  type="text"
+                                  class="inputField"
+                                  placeholder="Name*"
+                                  required
+                                />
+                              </div>
+                              <div class="inputContainer">
+                                <div class="inputIcon">
+                                  <i
+                                    class="fa-solid fa-envelope fa-xl"
+                                    style="color: #343a40"
+                                  ></i>
+                                </div>
+                                <input
+                                  type="email"
+                                  class="inputField"
+                                  placeholder="Email*"
+                                  required
+                                />
+                              </div>
+                        </div>
+
+                        <div id="inputRow2">
+                            <div class="inputContainer">
+                                <div class="inputIcon">
+                                  <i
+                                    class="fa-solid fa-phone fa-xl"
+                                    style="color: #343a40"
+                                  ></i>
+                                </div>
+                                <input
+                                  maxlength="20"
+                                  minlength="3"
+                                  type="number"
+                                  class="inputField"
+                                  placeholder="Phone*"
+                                  required
+                                />
+                              </div>
+                              <div class="inputContainer">
+                                <div class="inputIcon">
+                                  <i
+                                    class="fa-solid fa-clock fa-xl"
+                                    style="color: #343a40"
+                                  ></i>
+                                </div>
+                                <input
+                                  id="timepicker"
+                                  class="inputField"
+                                  placeholder="Time to Call"
+                                />
+                              </div>
+                        </div> 
+                      <div class="inputContainer">
+                        <textarea
+                          name="Message"
+                          class="message"
+                          cols="5"
+                          rows="5"
+                          placeholder="Message*"
+                          required
+                        ></textarea>
+                      </div>
+                      <button class="submitBtn" type="submit">
+                        Send Message
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="rightDetails">
+                <div class="contactInfoContainer">
+                    <div class="contactInfoBox">
+                        <div class="contactHeadingBox">
+                            <h6 class="contactHeading">Call Us Toll Free:</h6>
+                        </div>
+                        <div class="contactDetailBox">
+                            <a href="tel: +14165256333" class="contactDetail">
+                                <i class="fa-solid fa-phone fa-xs" style="color: #475f85;"></i>
+                                +14165256333</a
+                              >
+                        </div>
+                    </div>
+                    <div class="contactInfoBox">
+                        <div class="contactHeadingBox">
+                            <h6 class="contactHeading">Toronto Office:</h6>
+                        </div>
+                        <div class="contactDetailBox">
+                            <a href="https://www.google.com/maps/place/15+Gervais+Dr,+North+York,+ON+M3C+3S2,+Canada/@43.7157124,-79.3498737,15z/data=!4m10!1m2!2m1!1s15+Gervais+Dr,++Toronto,+ON!3m6!1s0x89d4cd082347b2bb:0x7fc3c7128fbc5a92!8m2!3d43.7220279!4d-79.3360908!15sChsxNSBHZXJ2YWlzIERyLCAgVG9yb250bywgT06SARBnZW9jb2RlZF9hZGRyZXNz4AEA!16s%2Fg%2F11csndnt_p" class="contactDetail">
+                                <i class="fa-solid fa-location-dot fa-xs" style="color: #475f85;"></i>
+                                15 Gervais Dr,
+                                Toronto, ON, Canada <br> 647-313-3400</a
+                              >
+                        </div>
+                    </div>
+                    <div class="contactInfoBox">
+                        <div class="contactHeadingBox">
+                            <h6 class="contactHeading">Woodbridge Office:</h6>
+                        </div>
+                        <div class="contactDetailBox">
+                            <a href="https://www.google.com/maps/place/7500+ON-27+Unit+18,+2nd+Floor,+Woodbridge,+ON+L4H+0J2,+Canada/@43.7701484,-79.6249027,17z/data=!3m1!4b1!4m5!3m4!1s0x882b3b36b30b5315:0xccfa3af102032a1f!8m2!3d43.7701446!4d-79.6223278" class="contactDetail">
+                                <i class="fa-solid fa-location-dot fa-xs" style="color: #475f85;"></i>
+                                7500 Highway 27, Unit 18, 2nd Floor
+                                WOODBRIDGE, ON <br> 289-203-1997</a
+                              >
+                        </div>
+                    </div>
+                    <div class="contactInfoBox">
+                        <div class="contactHeadingBox">
+                            <h6 class="contactHeading">Cell No:</h6>
+                        </div>
+                        <div class="contactDetailBox">
+                            <a href="tel: 416-525-6333" class="contactDetail">
+                                <i class="fa-solid fa-phone fa-xs" style="color: #475f85;"></i>
+                                416-525-6333</a
+                              >
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+      <footer class="sectionFooter">
+        <div class="footerContainer">
+          <div class="sectionListBox">
+            <div class="sectionList">
+              <a href="#" class="headerText">Privacy Policy</a>
+            </div>
+          </div>
+  
+          <div class="sectionListBox">
+            <div class="sectionList">
+              <a href="#" class="headerText">Terms and Conditions</a>
+            </div>
+          </div>
+  
+          <div class="sectionListBox">
+            <div class="sectionList">
+              <a href="/contact.html" class="headerText">Contact Us</a>
+            </div>
+          </div>
+  
+          <div class="sectionEmail">
+            <h3 class="heading h3__footer">Newsletter</h3>
+            <form action="#" class="notifyForm">
+              <span class="inputBox">
+                <input
+                  type="email"
+                  class="email"
+                  placeholder="Your Email"
+                  pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+                />
+              </span>
+              <button class="notifyBtn" type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="footerBrand">
+          <div class="brandImage">
+            <a href="#" class="brandImage__link">
+              <img
+                src="img/logo-Business-Exchange-NY-White.png"
+                alt="footer brand image"
+                class="brandImg"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="copyrightBox">
+          <a href="#" class="copyrightLink"
+            ><span>Copyright © 2023 - Business Exchange</span></a
+          >
+        </div>
+      
+    </main>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+    integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script type="module" src="js/script.js"></script>
+</html>

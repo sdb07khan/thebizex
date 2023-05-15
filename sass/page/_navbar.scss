@@ -6,6 +6,10 @@
   background-color: var(--white-1);
   z-index: 100;
 
+  @media only screen and (max-width: $bp-large) {
+    padding: 1rem 2rem 6rem 2rem;
+  }
+
   .navbarContainer {
     display: flex;
     flex-direction: column;
@@ -33,7 +37,11 @@
         }
 
         @media only screen and (max-width: $bp-large) {
-          display: none;
+          position: absolute;
+          top: 8rem;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 90%;
         }
 
         &__input {
@@ -95,57 +103,36 @@
           padding-right: 0;
         }
 
-        .infoList {
-          list-style: none;
-          display: flex;
-          align-items: center;
-          gap: 4rem;
+        .contact {
           font-family: var(--primary-font);
           font-size: 1.6rem;
 
           @media only screen and (max-width: $bp-medium) {
-            gap: 2rem;
+            background-color: var(--red);
+            height: 3rem;
+            width: 3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
           }
 
-          .contact {
+          .contactLink {
+            text-decoration: none;
+            color: var(--dark);
+
             @media only screen and (max-width: $bp-medium) {
-              background-color: var(--red);
-              height: 3rem;
-              width: 3rem;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              border-radius: 50%;
-            }
-            .contactLink {
-              text-decoration: none;
-              color: var(--dark);
-
-              @media only screen and (max-width: $bp-medium) {
-                display: none;
-              }
-            }
-
-            .contactLinkPhone {
-              text-decoration: none;
-              color: var(--dark);
               display: none;
-
-              @media only screen and (max-width: $bp-medium) {
-                display: contents;
-              }
             }
           }
 
-          .login {
-            .loginLink {
-              text-decoration: none;
-              display: flex;
-              align-items: center;
-              gap: 1.5rem;
-              padding: 0.8rem 0.8rem;
-              border: 1px solid var(--white-2);
-              border-radius: 20px;
+          .contactLinkPhone {
+            text-decoration: none;
+            color: var(--dark);
+            display: none;
+
+            @media only screen and (max-width: $bp-medium) {
+              display: contents;
             }
           }
         }

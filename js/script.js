@@ -49,3 +49,43 @@ $(".similarPostBox-slider").slick({
     // instead of a settings object
   ],
 });
+
+// Get the search value
+// Filter post as per search value
+const searchBox = document.querySelector(".search__input");
+const searchSubmitBtn = document.querySelector(".search__button");
+const allPosts = [...document.querySelectorAll(".businessCard")];
+console.log(allPosts, searchSubmitBtn);
+
+searchSubmitBtn.addEventListener("click", () => {
+  let searchTerm = searchBox.value.toLowerCase();
+
+  let count = 0;
+  allPosts.forEach((post, index) => {
+    const postTitle = post
+      .querySelector(".headingText")
+      .innerText.toLowerCase();
+    const postCategory = post
+      .querySelector(".categoryName__link")
+      .innerText.toLowerCase();
+    const postIndustry = post
+      .querySelector(".industryName__link")
+      .innerText.toLowerCase();
+
+    if (
+      postTitle.includes(searchTerm) ||
+      postCategory.includes(searchTerm) ||
+      postIndustry.includes(searchTerm)
+    ) {
+      post.style.display = "block";
+      count++;
+    } else {
+      post.style.display = "none";
+    }
+  });
+  if (count == 0) {
+    document.querySelector(".searchNotFound").classList.remove(".hidden");
+  } else {
+    document.querySelector(".searchNotFound").classList.add(".hidden");
+  }
+});

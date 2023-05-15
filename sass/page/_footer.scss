@@ -2,68 +2,31 @@
   background-color: var(--dark);
 
   .footerContainer {
-    display: flex;
-    justify-content: center;
-    gap: 5vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
+    row-gap: 4rem;
+    column-gap: 2rem;
+    place-content: center;
     font-family: var(--primary-font);
     padding: 8rem 5%;
 
-    @media only screen and (max-width: $bp-large) {
-      flex-direction: column;
-      align-items: center;
-      gap: 10vw;
-    }
-
-    .left {
-      display: flex;
-      gap: 5vw;
-
-      @media only screen and (max-width: $bp-large) {
-        gap: 10vw;
-      }
-    }
-
-    .right {
-      display: flex;
-      gap: 5vw;
-    }
-
     .sectionListBox {
+      text-align: center;
+
       .sectionList {
-        list-style: none;
-
         .headerText {
-          padding-bottom: 6px;
-
-          h3 {
-            text-transform: uppercase;
-            font-size: 1.6rem;
-            font-weight: 400;
-            color: var(--white-0);
-            letter-spacing: 1px;
-          }
-        }
-
-        .listItem {
-          padding: 6px 0;
-
-          &__link {
-            text-decoration: none;
-            color: var(--light);
-            font-size: 1.2rem;
-            font-weight: 300;
-            letter-spacing: 2px;
-            transition: all 0.1s ease-in;
-
-            &:hover {
-              color: var(--red);
-            }
-          }
+          text-decoration: none;
+          font-size: 1.8rem;
+          color: var(--white-0);
         }
       }
     }
 
     .sectionEmail {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
       .notifyForm {
         position: relative;
         border-radius: 4px;
@@ -75,11 +38,11 @@
             font-family: var(--primary-font);
             padding: 6px 8px;
             border: none;
-            min-width: 20rem;
+            min-width: 25rem;
             width: 25rem;
 
             @media only screen and (max-width: $bp-medium) {
-              width: 20rem;
+              min-width: 30rem;
             }
           }
 
